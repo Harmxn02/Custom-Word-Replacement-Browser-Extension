@@ -22,6 +22,12 @@ On the right side, click `Releases` and download the latest release. Then, follo
 > [!NOTE]
 > To unzip the provided `.zip` or `.rar` file, you can use built-in tools on most operating systems or third-party software like WinRAR or 7-Zip.
 
+&nbsp;
+
+> [!TIP]
+> Move the unzipped folder to where you want to store it on your computer first, and then load it in your browser.
+> Because if you move the folder after loading it, your browser won't find the extension files and you will have to reload it again.
+
 ## Examples
 
 ### Microsoft > Microslop
