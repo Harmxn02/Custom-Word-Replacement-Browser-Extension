@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Word Replacer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+	<div class="app">
+		<header class="header">
+			<div class="header-left">
+				<div class="logo">
+					<span class="logo-bracket">[</span>
+					<span class="logo-text">WR</span>
+					<span class="logo-bracket">]</span>
+				</div>
+				<div class="header-info">
+					<h1>Word Replacer</h1>
+					<span class="entry-count" id="entryCount">0 rules</span>
+				</div>
+			</div>
+			<label class="toggle-switch" title="Enable / disable all replacements">
+				<input type="checkbox" id="globalToggle" checked>
+				<span class="toggle-track">
+					<span class="toggle-thumb"></span>
+				</span>
+			</label>
+		</header>
+
+		<div class="add-section">
+			<div class="field-row">
+				<div class="field">
+					<label class="field-label">Find</label>
+					<input type="text" id="inputFrom" class="field-input" placeholder="original word…" autocomplete="off" spellcheck="false">
+				</div>
+				<div class="arrow">→</div>
+				<div class="field">
+					<label class="field-label">Replace</label>
+					<input type="text" id="inputTo" class="field-input" placeholder="replacement…" autocomplete="off" spellcheck="false">
+				</div>
+			</div>
+			<div class="options-row">
+				<label class="checkbox-label">
+					<input type="checkbox" id="optWholeWord" checked>
+					<span class="checkbox-box"></span>
+					<span>Whole word</span>
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox" id="optCaseSensitive">
+					<span class="checkbox-box"></span>
+					<span>Case sensitive</span>
+				</label>
+				<button id="addBtn" class="add-btn" disabled>Add rule</button>
+			</div>
+			<div class="error-msg" id="errorMsg"></div>
+		</div>
+
+		<div class="list-header" id="listHeader">
+			<span>FIND</span>
+			<span></span>
+			<span>REPLACE WITH</span>
+			<span></span>
+		</div>
+
+		<div class="rules-list" id="rulesList">
+			<div class="empty-state" id="emptyState">
+				<div class="empty-icon">∅</div>
+				<p>No rules yet.<br>Add one above to get started.</p>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<span>Changes apply on next page load</span>
+			<button class="clear-btn" id="clearBtn">Clear all</button>
+		</footer>
+	</div>
+	<script src="popup.js"></script>
+</body>
+</html>
